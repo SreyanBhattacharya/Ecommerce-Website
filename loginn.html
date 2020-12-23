@@ -1,0 +1,171 @@
+<html>
+<head>
+<title>Login Page</title>
+</head>
+<body background="hb.png">
+<BR><BR>
+<form name="loginForm" method="post" action="productpagee.html">
+
+<center><br><br><br><br><br><br><br>
+
+<div class="svg-wrapper">
+  <svg height="60" width="320">
+    <rect class="shape" height="60" width="320" />
+    <div class="text">Sign Up</div>
+  </svg>
+</div>
+     <table width="20%" align="center"><tr><td>
+
+          First Name  <input type="text" name="name" required><br><br>
+ </td></tr>       <tr><td> Second Name <input type="text" required><br><br>
+ </td></tr>
+
+
+
+
+<tr>
+<td>Email:
+<input type="text" size=25 name="email"></td>
+</tr>
+
+<tr>
+<td>Phone no.
+<input type="text" size=25 name="contactNo"></td>
+</tr>
+
+<tr>
+<td ><input type="Reset" value="RESET" class="button"></td><br><br>
+<td><input type="submit"  class="button" onclick="return check(this.form)" value="VALIDATE"></td>
+
+</table>
+</form>
+<style>
+.button{
+  font-size: 15px;
+  background-color:#FFFFFF; 
+  color: black; 
+  border-radius: 10px;
+  transition-duration: 0.4s;
+  border: 3px solid #5b5c5e;
+}
+.button:hover {
+  font-size: 20px;
+  background-color: #5b5c5e;
+  border-radius: 30px;
+  color: white;
+}
+textarea:focus , input:focus {
+  outline: none;
+}
+
+
+.sty {
+  border-radius: 6px;
+  background-color: #d1d1d1;
+  border:2px solid black;
+  color: #000000;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+
+
+html, body {
+  text-align: center;
+  height: 100%;
+
+  background-blend-mode: lighten;
+
+}
+.svg-wrapper {
+  position: relative;
+  top: 10%;
+  transform: translateY(-50%);
+	  margin: 0 auto;
+  width: 320px;
+}
+.shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  fill: transparent;
+  stroke: #7b7d7f;
+  border-bottom: 5px solid black;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+.text {
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 8px;
+  color:#5a5b5c;
+  top: -48px;
+  position: relative;
+}
+.svg-wrapper:hover .shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+}
+
+ input[type=text]{
+    border-radius: 25px;
+    margin: 8px 0;
+    border: 3px solid grey;
+    transition: 0.6s
+    width: 10%;
+    padding: 20px;
+    width: 200px;
+    height: 20px;
+}
+
+  input[type=text]:focus {
+    border: 3px solid black;
+    border-radius:30px;
+  }
+
+
+
+
+    .btn {
+      background-color: fuchsia;
+      padding: 15px 32px;
+      text-align: center;
+      cursor:pointer;
+    }
+
+</style>
+<script language="javascript">
+function validateEmail(emailField){
+
+
+}
+function check(form)
+{
+	var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+	var mob=form.contactNo.value
+        if (reg.test(form.email.value) == false)
+        {
+            alert('Invalid Email Address');
+            return false;
+        }
+	else if(mob.length!=10)
+	{
+		alert("invalid mobile number")
+		return false
+	}
+	else
+	{
+        	return true;
+	}
+}
+
+</script>
+
+</body>
+</html>

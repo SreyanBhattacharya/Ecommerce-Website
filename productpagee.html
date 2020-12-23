@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html, body {
+  text-align: center;
+  height: 100%;
+  
+}
+.svg-wrapper {
+  position: relative;
+  top: 10%;
+  transform: translateY(-50%);
+	  margin: 0 auto;
+  width: 320px;  
+}
+.shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  fill: transparent;
+  stroke: #7b7d7f;
+  border-bottom: 5px solid black;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+.text {
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 8px;
+  color:#5a5b5c;
+  top: -48px;
+  position: relative;
+}
+.svg-wrapper:hover .shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+}
+body{
+	background-attachment: fixed;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family:'Roboto Condensed';
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.head{
+	font-family:'Roboto Condensed';
+	color: #5b5c5e;
+	font-size: 22px;
+}
+	
+</style>
+</head>
+<body background="hb.png">
+<div class="svg-wrapper">
+  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    <rect class="shape" height="60" width="320" />
+    <div class="text">Product Page</div>
+  </svg>
+</div>
+
+
+<center><table cellspacing=20>
+<tr>
+<td>
+<div class="card">
+  <img src="o.png" alt="Premium Phone" style="width:100%" border=3>
+  <div class="head">Twoplus Seven Pro</div></td><td><div class="card">
+  <p class="price">Rs. 49,999</p> <b> Key Features:</b><br>
+16.9 cm (6.67 inch) Super AMOLED Display | Fingerprint Sensor<br>
+6GB RAM | 128GB ROM<br>
+48MP + 8MP + 16MP Triple Rear Camera | 16MP Front Camera<br>
+2.84 GHz Octa Core Processor<br>
+4000 mAh Battery<br>
+  <p><button onClick="location.href='two+.html'">Click to Buy</button></p>
+</div>
+</td>
+
+<td>
+<div class="card">
+  <img src="I.png" alt="Premium Phone" style="width:100%" border=3>
+  <div class="head">Kiwi Ephone X</div></td><td><div class="card">
+  <p class="price">Rs. 51,999</p>
+  <p><b>Key Features:</b><br>5.8-inch Super Retina display (OLED) with HDR<br>
+IP67 water and dust resistant <br>
+12MP dual cameras with dual OIS and 7MP<br> 
+Face ID for secure authentication<br>
+A11 Bionic with Neural Engine</p>
+  <p><button onClick="location.href='two+.html'">Click to Buy</button></p>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="card">
+  <img src="N.jpg" alt="Mirrorless DSLR" style="width:100%" border=3>
+  <div class="head">Nokin D3300 DSLR</div></td><td><div class="card">
+  <p class="price">Rs. 54,999</p>
+  <p><b>Key Features:</b><br> Sensor: APS-C CMOS Sensor with 24.2 MP <br>
+ISO: 100-25600 sensitivity range <br>
+Image Processor: Expeed 4 with 11 autofocus points <br>
+Video Resolution: Full HD video with fully manual control and selectable frame rates <br>
+Connectivity: WiFi, NFC and Bluetooth built-in )<br></p>
+  <p><button onClick="location.href='two+.html'">Click to Buy</button></p>
+</div>
+</td>
+
+<td>
+<div class="card">
+  <img src="c.jpg" alt="Denim Jeans" style="width:100%" border=3>
+  <div class="head">Conan SOE 600D</div></td><td><div class="card">
+  <p class="price">Rs. 23,999</p>
+  <p><b>Key Features:</b><br>
+Sensor: APS-C CMOS Sensor with 24.1 MP <br>
+ISO: 100-6400 sensitivity range <br>
+Image Processor: DIGIC 4+ with 9 autofocus points<br>
+Video Resolution: Full HD video with fully manual control and selectable frame rates .<br>
+Connectivity: WiFi, NFC and Bluetooth built-in <br></p>
+  <p><button onClick="location.href='two+.html'">Click to Buy</button></p>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="card">
+  <img src="A.jpg" alt="Gaming Monitor" style="width:100%" border=3>
+  <div class="head">Extraterware 12K Monitor</div></td><td><div class="card">
+  <p class="price">Rs. 1,99,889</p>
+  <p>
+<b>Key Features:</b><br>
+Screen Size: 35 inch (54.61 cm) 12K (15360 x 4320) IPS Panel<br>
+Connectivity Port: 1 VGA Port, 1 HDMI Port, 1 DVI Port, 1 Audio-Out Port, 1 Headphone Port<br>
+Aspect Ratio: 16:9,<br> Brightness (Typical): 250 cd/m²<br>
+Refresh Rate: 60 Hz,<br> 
+Viewing Angle: 178 degree horizontal 178 degree vertical<br>
+</p>
+  <p><button onClick="location.href='two+.html'">Click to Buy</button></p>
+</div>
+</td>
+<td>
+<div class="card">
+  <img src="h.png" alt="Smart Speaker" style="width:100%" border=3>
+  <div class="head">Hermès Axela Speaker</div></td><td><div class="card">
+  <p class="price">Rs. 3,999</p>
+  <p><b>Key Features:</b><br>
+Screen Size: 35 inch (54.61 cm) Play Music from Popular Streaming Services<br>
+Voice-controlled WiFi Speaker for Home<br>
+Ask Questions, Set Daily Reminders or Get News Updates<br>
+Works with Upto 7 Users with Personalised Settings.<br>
+Control Other Smart Devices in Home<br>
+Supports Hindi language also<br></p>
+  <p><button onClick="location.href='two+.html'">Click to Buy</button></p>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

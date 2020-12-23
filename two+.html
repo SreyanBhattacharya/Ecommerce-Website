@@ -1,0 +1,192 @@
+<html>
+<head><title>PAYMENT GATEWAY</title>
+<script>
+function display()
+	{
+ 	var f=0;
+	 var l = frm1.name.value;
+	if(isNaN(l))
+	{
+	f++;
+	}
+	else
+	{
+	alert("ENTER A VALID NAME")
+	document.location.reload();
+	}
+	var a= frm1.pin.value
+	if(isNaN(a) || a.length!=6)
+	{
+	alert("ENTER A VALID PIN CODE")
+	document.location.reload();
+	}
+	else
+	{
+	f++;
+	}
+	frm1.tot1.value=49999*parseInt(document.getElementById("qty1").value);
+	frm1.tot2.value=51999*parseInt(document.getElementById("qty2").value);
+	frm1.tot3.value=54999*parseInt(document.getElementById("qty3").value);
+	frm1.tot4.value=23999*parseInt(document.getElementById("qty4").value);
+	frm1.tot5.value=199889*parseInt(document.getElementById("qty5").value);
+	frm1.tot6.value=3999*parseInt(document.getElementById("qty6").value);
+	frm1.tot7.value=parseInt(frm1.tot1.value)+parseInt(frm1.tot2.value)+parseInt(frm1.tot3.value)+parseInt(frm1.tot4.value)+parseInt(frm1.tot4.value)+parseInt(frm1.tot5.value)+parseInt(frm1.tot6.value);
+	if(frm2.pay[0].checked)
+	{
+		if(f==2)
+		{
+			window.open("receipt.html");
+		}
+		else
+		{
+			document.location.reload();
+		}
+		
+	}
+	else if (frm2.pay[1].checked)
+	{
+			if(f==2)
+		{
+			window.open("pay_card.html");
+		}
+		else
+		{
+			document.location.reload();
+		}
+	}
+	else
+	{
+	alert("ERROR");
+	document.location.reload();
+	}
+}
+	
+</script>
+<style>
+input{
+  border: 2px solid #7a7b7d;
+  border-radius: 8px;
+  padding: 6px 20px;
+}
+table,th,td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: 15px;
+  text-align: center;
+  
+}
+tr{
+  background-color:#d4d6d9;
+}
+tr:hover {
+  background-color:white;
+  transition-duration: 0.4s;
+}
+.button{
+  font-size: 15px;
+  background-color:#ffffff; 
+  color: black; 
+  border-radius: 10px;
+  transition-duration: 0.4s;
+  border: 3px solid #5b5c5e;
+}
+.button:hover {
+  font-size: 20px;
+  background-color: #5b5c5e;
+  border-radius: 30px;
+  color: white;
+}
+.tab1{
+	position: absolute;
+  	top: 7%;
+  	left: 2%;
+}
+.tab2{
+	position: absolute;
+  	top: 7%;
+  	left: 51%;
+}
+.tab3{
+	position: absolute;
+  	top: 55%;
+  	left: 13%;
+}
+</style>
+</head>
+<body background="hb.png"><center>
+<form action="" name="frm1"><div class="tab1">
+<p><h2>PERSONAL DETAILS:</h2></p>
+<table>
+<tr><td><b>NAME</td><td><input type="text" size="60" name="name" placeholder="Enter here"></input></td></tr>
+<tr><td><b>ADDRESS</td><td><input type="text" name="add" size="60" placeholder="Enter here"></input></td></tr>
+<tr><td><b>PIN CODE</td><td><input type="text" name="pin" size="60" placeholder="Enter here"></input></td></tr>
+</table><p></div>
+<div class="tab2">
+<h2>ORDER DETAILS:</h2></p>
+<table>
+<tr><th><b>PRODUCT NAME</b></th><th><b>QUANTITY</b></th><th><b>PRICE</b></th></tr>
+<tr><td>TWO PLUS 7 PRO</td>
+<td><select id="qty1" ><option value="00">00</option>
+<option value="01">01</option><option value="02">02</option>
+<option value="03">03</option><option value="04">04</option>
+<option value="05">05</option><option value="06">06</option>
+<option value="07">07</option><option value="08">08</option>
+<option value="09">09</option><option value="10">10</option>
+</select></td>
+<td><input type="text" name="tot1" size="30" placeholder="Total price will appear here"></input></td></tr>
+<tr><td>KIWI EPHONE X</td>
+<td><select id="qty2" ><option value="00">00</option>
+<option value="01">01</option><option value="02">02</option>
+<option value="03">03</option><option value="04">04</option>
+<option value="05">05</option><option value="06">06</option>
+<option value="07">07</option><option value="08">08</option>
+<option value="09">09</option><option value="10">10</option>
+</select></td>
+<td><input type="text" name="tot2" size="30" placeholder="Total price will appear here"></input></td></tr>
+<tr><td>NOKIN D3300</td>
+<td><select id="qty3" ><option value="00">00</option>
+<option value="01">01</option><option value="02">02</option>
+<option value="03">03</option><option value="04">04</option>
+<option value="05">05</option><option value="06">06</option>
+<option value="07">07</option><option value="08">08</option>
+<option value="09">09</option><option value="10">10</option>
+</select></td>
+<td><input type="text" name="tot3" size="30" placeholder="Total price will appear here"></input></td></tr>
+<tr><td>CONAN 600D</td>
+<td><select id="qty4" ><option value="00">00</option>
+<option value="01">01</option><option value="02">02</option>
+<option value="03">03</option><option value="04">04</option>
+<option value="05">05</option><option value="06">06</option>
+<option value="07">07</option><option value="08">08</option>
+<option value="09">09</option><option value="10">10</option>
+</select></td>
+<td><input type="text" name="tot4" size="30" placeholder="Total price will appear here"></input></td></tr>
+<tr><td>EXTRATER 12K MONITOR</td>
+<td><select id="qty5" ><option value="00">00</option>
+<option value="01">01</option><option value="02">02</option>
+<option value="03">03</option><option value="04">04</option>
+<option value="05">05</option><option value="06">06</option>
+<option value="07">07</option><option value="08">08</option>
+<option value="09">09</option><option value="10">10</option>
+</select></td>
+<td><input type="text" name="tot5" size="30" placeholder="Total price will appear here"></input></td></tr>
+<tr><td>HERMES AXELA</td>
+<td><select id="qty6" ><option value="00">00</option>
+<option value="01">01</option><option value="02">02</option>
+<option value="03">03</option><option value="04">04</option>
+<option value="05">05</option><option value="06">06</option>
+<option value="07">07</option><option value="08">08</option>
+<option value="09">09</option><option value="10">10</option>
+</select></td>
+<td><input type="text" name="tot6" size="30" placeholder="Total price will appear here"></input></td></tr>
+<tr><td>NET PRICE</td><td colspan="2"><input type="text" name="tot7" size="30" placeholder="Total price will appear here"></input></td></tr>
+</table></div></form>
+<div class="tab3"></br></br>
+<form action="" name="frm2">
+<h2>PAYMENT GATEWAY:</h2><b>
+  <input type="radio" name="pay" value="cod"> CASH ON DELIVERY
+  <input type="radio" name="pay" value="card"> CREDIT/ DEBIT CARD<br></br>
+</form>
+<input type="button" class="button" onClick="display()" value="SUBMIT" ></div>
+</body>
+</html>
